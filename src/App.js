@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import TasksIndex from "./components/tasks";
+import { setTasks } from "./store/tasks/actions";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(
+            setTasks(JSON.parse(localStorage.getItem("tasks_to_do")) ?? [])
+        );
+    }, []);
+
+    return (
+        <div className='w-full h-screen bg-gray-800'>
+            <div className='flex flex-col space-y-8 items-center justify-center h-full text-center'>
+                <div className='max-w-screen-sm w-full rounded-lg bg-white text-gray-900 px-6 py-2 mx-auto'>
+                    <TasksIndex />
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default App;

@@ -1,0 +1,31 @@
+{
+  "html-css-class-completion.enableEmmetSupport": true,
+  "emmet.excludeLanguages": [],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.preferences": {},
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "tailwindCSS.emmetCompletions": true,
+  "editor.formatOnSave": true,
+  "editor.quickSuggestionsDelay": 1,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "html.format.indentInnerHtml": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.tabWidth": 4
+}
